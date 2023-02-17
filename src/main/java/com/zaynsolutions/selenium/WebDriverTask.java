@@ -31,8 +31,7 @@ public class WebDriverTask  implements Runnable {
         this.bufferWriter=bufferWriter;
     }
 
-    public synchronized void executeTask(){
-
+    public void executeTask(){
         System.out.println("Thread " + Thread.currentThread().getId()+ " is running");
         driver.get(url);
         Set<Cookie> cookies = driver.manage().getCookies();
@@ -49,7 +48,6 @@ public class WebDriverTask  implements Runnable {
         } catch (IOException e) {
             e.printStackTrace();				
         }
-        System.out.println("Thread " + Thread.currentThread().getId()+ " is finished");
-        
+        System.out.println("Thread " + Thread.currentThread().getId()+ " is finished");        
     }
 }
