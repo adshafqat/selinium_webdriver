@@ -16,7 +16,7 @@ import org.openqa.selenium.Cookie;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+//@SpringBootApplication
 public class ParallelCalls {
     
 
